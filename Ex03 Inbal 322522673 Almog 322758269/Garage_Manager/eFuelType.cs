@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ex03.GarageLogic
 {
-    internal class ValueOutOfRangeException : Exception
+    public enum eFuelType
     {
+        Octan98,
+        Octan96,
+        Octan95,
+        Soler
     }
 }

@@ -5,15 +5,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Garage_Manager
+namespace Ex03.GarageLogic
 {
     public abstract class Vehicle
     {
-        //- m_ModelName (string)
-        //- m_LicenseNumber (string)
-        //- m_RemainingEnergy (float)
-        //- m_Wheel<T>:
-
         private readonly string m_ModelName;
         private readonly string m_LicenseNumber;
         private float m_RemainingEnergy;
@@ -56,8 +51,6 @@ namespace Garage_Manager
             {
                 m_RemainingEnergy = value;
             }
-        }
-
-         
+        }         
     }
 }

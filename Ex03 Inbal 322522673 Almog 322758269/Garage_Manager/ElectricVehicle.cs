@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Garage_Manager
+namespace Ex03.GarageLogic
 {
-    internal class Car :Vehicle
+    internal abstract class ElectricVehicle
     {
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ex03.GarageLogic
 {
-    internal class ValueOutOfRangeException : Exception
+    public enum eLicenseType
     {
+        A1,
+        A2,
+        B1,
+        B2
     }
 }

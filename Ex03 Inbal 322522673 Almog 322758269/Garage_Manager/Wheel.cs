@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Garage_Manager
+namespace Ex03.GarageLogic
 {
     public class Wheel
     {
@@ -23,15 +23,23 @@ namespace Garage_Manager
             m_maxAirPressure = i_maxAirPressure;
         }
 
+        public string Manufacturer
+        {
+            get
+            {
+                return m_manufacturer;
+            }
+            set
+            {
+                m_manufacturer = value;
+            }
+        }
+
         public float MaxAirPressure
         {
             get
             {
                 return m_maxAirPressure;
-            }
-            set
-            {
-                m_maxAirPressure = value;
             }
         }
 
@@ -51,9 +59,18 @@ namespace Garage_Manager
                 m_currentAirPressure = value;
             }
         }
+
+        public void Pump(float i_PreassureToAdd)
+        {
+            if(i_PreassureToAdd + m_currentAirPressure > m_maxAirPressure)
+            {
+                throw new ValueOutOfRangeException(0, m_maxAirPressure); //Check
+            }
+            else
+            {
+                m_currentAirPressure += i_PreassureToAdd;
+            }
         }
-
-
 
     }
 }

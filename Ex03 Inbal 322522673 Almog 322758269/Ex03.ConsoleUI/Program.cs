@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Garage_Manager
+namespace Ex03.ConsoleUI
 {
-    internal class Bike : Vehicle
+    internal class Program
     {
     }
 }
