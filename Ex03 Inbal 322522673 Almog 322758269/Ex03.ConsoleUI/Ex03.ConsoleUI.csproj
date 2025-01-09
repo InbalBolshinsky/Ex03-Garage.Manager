@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
+  </ItemGroup>	
   <ItemGroup>
     <Compile Include="Program.cs" />
   </ItemGroup>

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Ex03.ConsoleUI
 {
-    internal class Program
+    public class Program
     {
+        public static void Main()
+        {
+            UI systemUI = new UI();
+            systemUI.GarageMenu();
+            Console.ReadLine();
+
+        }
     }
 }
