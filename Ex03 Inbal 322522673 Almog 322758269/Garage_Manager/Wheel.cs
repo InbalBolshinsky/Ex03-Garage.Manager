@@ -8,12 +8,6 @@ namespace Ex03.GarageLogic
 {
     public class Wheel
     {
-        //- m_Manufacturer(string)
-        //- m_CurrentAirPressure(float)
-        //-m_MaxAirPressure(float)
-
-        //+ (return value) Pump(i_PressureToAdd)
-
         private string m_manufacturer;
         private float m_currentAirPressure;
         private readonly float m_maxAirPressure;

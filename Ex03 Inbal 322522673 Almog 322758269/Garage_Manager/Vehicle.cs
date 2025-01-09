@@ -11,18 +11,28 @@ namespace Ex03.GarageLogic
     {
         private readonly string m_ModelName;
         private readonly string m_LicenseNumber;
-        private float m_RemainingEnergy;
+        private float m_energyPercentageLeft;
         private Wheel[] m_Wheels;
 
 
-        public Vehicle(int i_NumberOfWheels, float i_RemainingEnergy)
+        public Vehicle(int i_NumberOfWheels, float i_maxAirPressure)
         {
             Wheel[] m_Wheels = new Wheel[i_NumberOfWheels];
             for (int i = 0; i < i_NumberOfWheels; i++)
             {
-                m_Wheels[i] = new Wheel(i_RemainingEnergy);
+                m_Wheels[i] = new Wheel(i_maxAirPressure);
             }
 
+        }
+
+        public float EnergyPercentageLeft
+        {
+            get { return m_energyPercentageLeft; }
+        }
+
+        public Wheels[] Wheels
+        {
+            get { return r_wheels; }
         }
 
         public string ModelName
@@ -41,16 +51,36 @@ namespace Ex03.GarageLogic
             }
         }
 
-        public float RemainingEnergy
+        public void SetEnergyPersentageLeft(float i_energyPersentageLeft)
         {
-            get
+            m_energyPercentageLeft = i_energyPersentageLeft;
+        }
+
+        public void SetTireManufacturer(int i_tireIndex, string i_manufacturer)
+        {
+            Wheels[i_tireIndex].Manufacturer = i_manufacturer;
+        }
+
+        public void SetTireAirPressure(int i_tireIndex, float i_airPressure)
+        {
+            Wheels[i_tireIndex].AirPressure = i_airPressure;
+        }
+
+        public void SetAllTiresAirPressure(float i_airPressure)
+        {
+            for (int i = 0; i < Wheels.Length; i++)
             {
-                return m_RemainingEnergy;
+                SetTireAirPressure(i, i_airPressure);
             }
-            set
+        }
+
+        public void SetAllTiresManufacturer(string i_manufacturer)
+        {
+            for (int i = 0; i < this.Wheels.Length; i++)
             {
-                m_RemainingEnergy = value;
+                SetTireManufacturer(i, i_manufacturer);
             }
-        }         
+        }
+
     }
 }

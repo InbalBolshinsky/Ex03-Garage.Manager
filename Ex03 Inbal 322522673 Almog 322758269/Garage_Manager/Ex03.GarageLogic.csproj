@@ -50,6 +50,12 @@
     <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleOwner.cs" />
     <Compile Include="Wheel.cs" />
+	<Compile Include="eCarColors.cs" />
+	<Compile Include="eNumberOfDoors.cs" />
+	<Compile Include="eRepairState.cs" />
+	<Compile Include="eVehicleTypes.cs" />
+	
+	
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
